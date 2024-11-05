@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends "basicapp/base.html" %}
+<!-- loading custom template filter -->
+{% load my_extras %}
+{% block body_block %}
+    <H1>WELCOM TO INDEX PAGE</H1>
+    <h2>THIS IS EXAMPLE OF TEMPLATE inheritANCE</h2>
+    <!-- template filter -->
+    <!-- template filter without parameter -->
+    {{text|upper}} 
+     <!-- template filter with parameter -->
+    {{number|add:"99"}}
+    <!-- custom filter -->
+    <h1>{{text|cut:'hello'}}</h1>
+
+ {% endblock %}
